@@ -1,37 +1,32 @@
-# ai-code-reviewer
-CodeReview – AI Code Assistant
+🚀 CodeReview – AI Code Assistant
 
-An AI-powered code review application built using Python, Flask, and Ollama. It helps developers understand their code, identify potential issues, get suggestions, fix errors, and convert code between programming languages.
+An AI-powered code review application built using Python, Flask, and Ollama. It helps developers analyze source code, identify potential issues, understand errors, improve code quality, generate corrected code, and convert code between programming languages.
 
-The application uses a locally running AI model through Ollama, so no paid cloud API key is required.
+The application uses a locally running AI model through Ollama, eliminating the need for paid cloud API keys.
 
-Features
-
-- AI Code Review: Analyze code and identify potential issues.
-- Error Explanation: Understand errors and problematic code in simple language.
-- Code Suggestions: Get recommendations to improve code quality and readability.
-- Fix Code: Generate an improved version of submitted code.
-- Code Conversion: Convert code from one programming language to another.
-- User Authentication: Register and log in securely.
-- Review History: Access previously submitted code reviews.
-- Local AI Integration: Use Ollama to run the AI model locally.
-- Responsive Interface: Clean and user-friendly web interface.
-
-Technologies Used
-
-Technology| Purpose
-Python| Backend programming
-Flask| Web application framework
-HTML| Page structure
-CSS| User interface design
-JavaScript| Frontend interactions
-SQLite| Database
-Ollama| Local AI model integration
-Qwen2.5-Coder| AI-powered code assistance
-Git & GitHub| Version control
-
-Project Structure
-
+✨ Features
+AI Code Review: Analyze source code and identify potential bugs and issues.
+Error Explanation: Understand errors and problematic code in simple language.
+Code Suggestions: Get recommendations to improve code quality, readability, and maintainability.
+Fix Code: Generate improved and corrected versions of submitted code.
+Code Conversion: Convert code from one programming language to another.
+User Authentication: Secure user registration and login.
+Review History: Access previously submitted code reviews.
+Local AI Integration: Run AI models locally using Ollama.
+Responsive Interface: Clean and user-friendly web interface.
+🛠️ Technologies Used
+Technology	Purpose
+Python	Backend programming
+Flask	Web application framework
+HTML5	Page structure
+CSS3	User interface design
+JavaScript	Frontend interactions
+SQLite	Database management
+Ollama	Local AI model integration
+Qwen2.5-Coder	AI-powered code assistance
+Git & GitHub	Version control
+📁 Project Structure
+text
 CodeReview_Ollama/
 │
 ├── app.py
@@ -51,84 +46,94 @@ CodeReview_Ollama/
     └── js/
         └── app.js
 
-Installation and Setup
-
+⚙️ Installation and Setup
 1. Clone the Repository
-
+bash
 git clone YOUR_GITHUB_REPOSITORY_URL
 
-Navigate into the project:
 
+Navigate into the project directory:
+
+bash
 cd CodeReview_Ollama
 
 2. Install Ollama
 
 Download and install Ollama:
 
-https://ollama.com/download/windows
+https://ollama.com/download
 
 3. Download the AI Model
 
-Open your terminal and run:
+Open your terminal and execute:
 
+bash
 ollama pull qwen2.5-coder:1.5b
+
 
 To test the model:
 
+bash
 ollama run qwen2.5-coder:1.5b
 
 4. Create a Virtual Environment
-
+bash
 py -m venv venv
 
-Activate it in Windows PowerShell:
 
+Activate the environment in Windows PowerShell:
+
+powershell
 .\venv\Scripts\Activate.ps1
 
 5. Install Dependencies
-
+bash
 pip install -r requirements.txt
 
 6. Run the Application
 
 Make sure Ollama is running, then execute:
 
+bash
 python app.py
+
 
 Open your browser and visit:
 
 http://127.0.0.1:5000
 
-Create an account and start reviewing your code.
+Register an account and start reviewing your code!
 
-How It Works
+🔄 How It Works
+The user registers or logs into the application.
+The user selects a programming language and enters source code.
+The application sends the submitted code to the locally running Ollama model.
+The AI model analyzes the source code.
+The application displays code reviews, explanations, and improvement suggestions.
+Users can request corrected code or convert code into another programming language.
+Previous reviews are stored in the SQLite database.
+🔐 Security
+User passwords are stored using password hashing.
+The application uses a locally running AI model instead of a paid cloud API.
+Submitted code is analyzed as text and is not executed by the application.
+Sensitive information such as passwords, secret keys, and environment variables should never be committed to GitHub.
+Local model execution does not automatically guarantee that submitted code or data is secure.
+🚀 Future Improvements
+Support for additional programming languages.
+More detailed code quality analysis.
+Improved bug detection and error explanations.
+Download reviewed and corrected code.
+Integration of additional AI models.
+Advanced code quality scoring.
+Improved user dashboard and review history.
+👨‍💻 Author
 
-1. The user registers or logs into the application.
-2. The user selects a programming language and enters code.
-3. The application sends the code to the local Ollama model.
-4. The AI analyzes the submitted code.
-5. The application displays the review, explanations, and suggestions.
-6. Users can request code fixes or language conversion.
-7. Review history is stored in the SQLite database.
-
-Security Notes
-
-- User passwords are stored using password hashing.
-- The application uses a local AI model instead of a paid cloud API.
-- Submitted code is analyzed as text and is not executed by the application.
-- Never commit passwords, API keys, or other sensitive information to GitHub.
-
-Future Improvements
-
-- Support for additional programming languages.
-- More detailed code quality analysis.
-- Improved error detection and explanations.
-- Download reviewed and corrected code.
-- Additional AI models and customization options.
-
-Author
 Shivakumar
 
----
+BCA Graduate |Interested in AI and Software Development
 
-CodeReview is a learning and development project created to explore AI integration, Python web development, and automated code analysis.
+📌 About the Project
+
+CodeReview is a learning and development project created to explore AI integration, Python web development, local large language models, and automated code analysis.
+
+If you find this project useful, consider giving it a ⭐ on GitHub!
