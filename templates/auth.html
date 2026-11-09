@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeReview · Sign in</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="brand" href="/"><span class="brand-mark">CR</span> CodeReview</a>
+    <p class="eyebrow">YOUR LOCAL AI CODE ASSISTANT</p>
+    <h1>Build better code.</h1>
+    <p class="muted">Review, understand and improve your code with a local Ollama model.</p>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}
+    {% endwith %}
+    <form method="post" class="auth-form">
+      <label>Username<input name="username" required autocomplete="username" placeholder="Choose a username"></label>
+      <label>Password<input name="password" type="password" required autocomplete="current-password" placeholder="At least a few characters"></label>
+      <div class="auth-actions">
+        <button name="action" value="login" class="btn primary" type="submit">Sign in</button>
+        <button name="action" value="register" class="btn secondary" type="submit">Create account</button>
+      </div>
+    </form>
+    <p class="tiny-note">Your account and review history are stored locally in this project folder.</p>
+  </main>
+</body></html>
