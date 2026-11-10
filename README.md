@@ -27,6 +27,7 @@ Qwen2.5-Coder	AI-powered code assistance
 Git & GitHub	Version control
 📁 Project Structure
 text
+
 CodeReview_Ollama/
 │
 ├── app.py
